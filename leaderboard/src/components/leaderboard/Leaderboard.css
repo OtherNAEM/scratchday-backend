@@ -1,0 +1,101 @@
+/* Gradient background animation */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    background: linear-gradient(270deg, #ff6a00, #ee0979);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Centered container for the leaderboard */
+.container {
+    width: 500px;
+    height: 100vh; /* Make the container take the full height of the browser window */
+    max-height: 100%; /* Ensure it doesn't exceed the viewport height */
+    margin: 0;
+    background-color: #fff; /* Card background color */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: #333; /* Text color for the leaderboard */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Leaderboard heading */
+h1 {
+    text-align: center;
+    color: #e67e22; /* Darker yellow color for the heading */
+    margin: 0 0 20px;
+}
+
+/* Leaderboard list */
+.leaderboard {
+    margin-top: 20px;
+    overflow-y: auto; /* Allow vertical scrolling */
+    flex-grow: 1; /* Allow the leaderboard to take up remaining space */
+    padding-right: 10px; /* Add some space on the right for the scrollbar */
+}
+
+/* Each leaderboard entry */
+.entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.entry:last-child {
+    border-bottom: none;
+}
+
+/* Medal styling */
+.medal {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Color-coded backgrounds for top positions */
+.gold {
+    background-color: #f1c40f; /* Gold color */
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.silver {
+    background-color: #bdc3c7; /* Silver color */
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.bronze {
+    background-color: #e67e22; /* Bronze color */
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Team name styling */
+.name {
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Score styling */
+.score {
+    font-weight: normal;
+    font-size: 20px;
+}
